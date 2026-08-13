@@ -1,7 +1,7 @@
 {
-  "catalogExportDate": "2025-12-14T12:19:26Z",
-  "totalRecords": 23206,
-  "totalUnfilteredRecords": 24668,
+  "catalogExportDate": "2026-08-13T10:56:49Z",
+  "totalRecords": 23727,
+  "totalUnfilteredRecords": 25016,
   "catalogs": {
     "filtered": {
       "json": "https://hossain-khan.github.io/android-device-catalog-parser/catalog-data/android-devices-catalog.json",
