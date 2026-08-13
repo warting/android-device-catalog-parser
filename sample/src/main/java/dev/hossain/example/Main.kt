@@ -2,6 +2,7 @@ package dev.hossain.example
 
 import dev.hossain.android.catalogparser.ParserConfig
 import dev.hossain.android.catalogparser.models.FormFactor
+import dev.hossain.example.demonstrateParserConfigurations
 import java.io.File
 import java.util.Date
 
@@ -85,6 +86,14 @@ fun main() {
     File("DATA_SUMMARY.md").writeText(summaryContent)
     println("✓ Generated DATA_SUMMARY.md")
     println("==================================\n")
+
+    // Store parsed devices into SQLite database
+    println("=== Database Operations ===")
+    val dbOperations = DatabaseOperations()
+    val dbPath = "sample/src/main/resources/devices.db"
+    dbOperations.processRecordsToDb(devices, dbPath)
+    dbOperations.validateDatabaseIntegrity(devices, dbPath)
+    println("===========================\n")
 
     println("✓ Sample application completed successfully!")
 }

@@ -70,6 +70,8 @@ class DatabaseOperations {
                 }
             }
 
+            // Compact the database file to reclaim unused space
+            driver.execute(null, "VACUUM", 0)
             println("✓ Inserted ${devices.size} records to database: $dbPath")
             return true
         } catch (e: Exception) {
